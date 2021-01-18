@@ -15,13 +15,13 @@ function getSongData() {
         .then(response => {
             return response.json();
         }).then(response => {
-            console.log(response);
+            /*console.log(response);*/
 
             for (i = 0; i < 5; i++) {
                 tracks.add(response.tracks[i].name);/* The tracks variable is declared at the beginning of this document.*/
             }
 
-            console.log(tracks);
+            /*console.log(tracks);*/
             formatSongData();
         })
         .catch(err => {
@@ -42,7 +42,7 @@ function formatSongData() {
         songDataSpans[i].innerHTML = tracksArray[i];
     }
 
-    console.log(songDataSpans);
+    /*console.log(songDataSpans);*/
 
     document.getElementById("data-div").className = "data-div-display";
 
